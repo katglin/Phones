@@ -1,3 +1,120 @@
-﻿@{
+﻿@using Phones.Models;
+@model IEnumerable <PhoneViewModel>
+@{
     ViewBag.Title = "Smartphone World";
 }
+
+<div class="section">
+    <a name="home"></a>
+    @{
+        var images = (List <string>)ViewBag.images;
+        if (images != null && images.Any())
+        {
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    @{
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        for (int i = 1; i < images.Count(); i++)
+                        {
+                            <li data-target="#myCarousel" data-slide-to="@i"></li>
+                        }
+                    }
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    @{
+                        var active = "active";
+                        foreach (var image in images)
+                        {
+                            <div class="item @active">
+                                <img src=@Url.Content(image) width="100%" alt="Popular image">
+                            </div>
+                            active = "";
+                        }
+                    }
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        }
+    }
+
+</div>
+
+<div class="section">
+    <h2><a name="phones"></a>Phones</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if(Model!=null && Model.Any())
+            {
+                foreach(var phone in Model)
+                {
+                    <tr>
+                        <th scope="row"><img src="@Url.Content(phone.ImagePath)" width="120px" height: "90px" alt="Phone"></th>
+                        <td>
+                            <strong>@phone.Title</strong>
+                            <p>@phone.Description</p>
+                        </td>
+                        <td>@String.Format("{0:n}", phone.Price)</td>
+                    </tr>
+                }
+            }
+            else
+            {
+               <tr colspan="3"> 
+                   <td>No phones added yet</td>
+               </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="section">
+    <h2><a name="contact-us"></a>Contact us</h2>
+
+    <form>
+        <div class="form-group">
+            <label for="email">Your email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Yout email">
+        </div>
+        <div class="form-group">
+            <label for="contact-message">Your message:</label>
+            <textarea class="form-control" id="contact-message" placeholder="Drop us a line" rows="5"></textarea>
+        </div>
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#sendModal">Send</button>
+    </form>
+
+    <!-- Modal -->
+    <div id="sendModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Thank you for joining us!</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

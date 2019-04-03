@@ -16,9 +16,33 @@
     white-space: normal;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-left: 10%;
+    background-color: black;
+    color: white;
+}
+
+.section {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+form {
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: 10px;
+}
+
 textarea {
-    max-width: 280px;
+    resize: none;
 }
