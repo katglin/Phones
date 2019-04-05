@@ -28,7 +28,7 @@
                         foreach (var image in images)
                         {
                             <div class="item @active">
-                                <img src=@Url.Content(image) alt="Popular image">
+                                <img src="@Url.Content(image)" alt="Popular image">
                             </div>
                             active = "";
                         }
@@ -64,7 +64,7 @@
                 foreach(var phone in Model)
                 {
                     <tr>
-                        <th scope="row"><img src="@Url.Content(phone.ImagePath)" width="120px" height: "90px" alt="Phone"></th>
+                        <th scope="row"><img src=@Url.Content(phone.ImagePath) width="120" height: "90" alt="Phone"></th>
                         <td>
                             <strong>@phone.Title</strong>
                             <p>@phone.Description</p>

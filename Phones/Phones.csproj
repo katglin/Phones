@@ -200,24 +200,20 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <None Include="App_Data\Images\Popular\1.jpeg" />
-    <Content Include="App_Data\Images\Popular\2.jpg" />
-    <None Include="App_Data\Images\Popular\3.jpeg" />
-    <Content Include="App_Data\Images\Popular\4.jpg" />
-    <None Include="App_Data\Images\Popular\5.jpeg" />
-    <None Include="App_Data\Images\Phones\1.jpeg" />
-    <Content Include="App_Data\Images\Phones\2.jpg" />
-    <None Include="App_Data\Images\Phones\3.jpeg" />
-    <Content Include="App_Data\Images\Phones\4.jpg" />
-    <None Include="App_Data\Images\Phones\5.jpeg" />
+    <None Include="Storage\Images\Popular\1.jpeg" />
+    <Content Include="Storage\Images\Popular\2.jpg" />
+    <None Include="Storage\Images\Popular\3.jpeg" />
+    <Content Include="Storage\Images\Popular\4.jpg" />
+    <None Include="Storage\Images\Popular\5.jpeg" />
+    <None Include="Storage\Images\Phones\1.jpeg" />
+    <Content Include="Storage\Images\Phones\2.jpg" />
+    <None Include="Storage\Images\Phones\3.jpeg" />
+    <Content Include="Storage\Images\Phones\4.jpg" />
+    <None Include="Storage\Images\Phones\5.jpeg" />
     <Content Include="Content\Main.scss" />
     <Content Include="Content\Main.css" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-    <Folder Include="App_Data\Images\Phones\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
