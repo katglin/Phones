@@ -28,7 +28,7 @@
                         foreach (var image in images)
                         {
                             <div class="item @active">
-                                <img src=@Url.Content(image) width="100%" alt="Popular image">
+                                <img src=@Url.Content(image) alt="Popular image">
                             </div>
                             active = "";
                         }
@@ -53,9 +53,9 @@
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">Image</th>
-                <th scope="col">Description</th>
-                <th scope="col">Price</th>
+                <th scope="col" class="text-center">Image</th>
+                <th scope="col" class="text-center">Description</th>
+                <th scope="col" class="text-center">Price</th>
             </tr>
         </thead>
         <tbody>

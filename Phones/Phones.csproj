@@ -142,7 +142,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
@@ -211,6 +210,8 @@
     <None Include="App_Data\Images\Phones\3.jpeg" />
     <Content Include="App_Data\Images\Phones\4.jpg" />
     <None Include="App_Data\Images\Phones\5.jpeg" />
+    <Content Include="Content\Main.scss" />
+    <Content Include="Content\Main.css" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
